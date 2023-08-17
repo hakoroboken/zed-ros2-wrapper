@@ -136,6 +136,11 @@ def launch_setup(context, *args, **kwargs):
         # prefix=['xterm -e valgrind --tools=callgrind'],
         # prefix=['xterm -e gdb -ex run --args'],
         #prefix=['gdbserver localhost:3000'],
+        remappings=[('/zed2i/zed_node/left_raw/camera_info', 'camera_info_left'),
+                    ('/zed2i/zed_node/right_raw/camera_info', 'camera_info_right'),
+                    ('/zed2i/zed_node/left_raw/image_raw_color', 'rgb_left'),
+                    ('/zed2i/zed_node/right_raw/image_raw_color', 'rgb_right'),
+                    ('/zed2i/zed_node/imu/data', 'imu')],
         parameters=[
             # YAML files
             config_common_path,  # Common parameters
